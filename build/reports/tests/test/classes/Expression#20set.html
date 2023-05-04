@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">49.362s</div>
+<div class="counter">1m42.43s</div>
 <p>duration</p>
 </div>
 </td>
@@ -76,15 +76,13 @@
 <a name="Validate values after execute en expression set simulation"></a>
 <h3 class="failures">Validate values after execute en expression set simulation</h3>
 <span class="code">
-<pre>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: no such window: target window already closed
-from unknown error: web view not found
+<pre>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: element not interactable
   (Session info: chrome=112.0.5615.138)
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'QV-4097', ip: '192.168.20.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_333'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\QV4097\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:53806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 358a29438ce709b4cd0594475e07eccc
-*** Element info: {Using=xpath, value=//body[1]/div[4]/div[1]/section[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/section[1]/div[1]/div[1]/article[1]/a[1]/div[1]/span[1]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\QV4097\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:62075}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d0b18ed96e58d8eae19e3c64496e84cd
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -94,19 +92,9 @@ Session ID: 358a29438ce709b4cd0594475e07eccc
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:231)
-	at net.serenitybdd.core.pages.WebElementResolverByLocator.resolveForDriver(WebElementResolverByLocator.java:16)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.getElement(WebElementFacadeImpl.java:208)
-	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:63)
-	at net.serenitybdd.core.pages.WebElementExpectations$3.apply(WebElementExpectations.java:55)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilEnabled(WebElementFacadeImpl.java:960)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementAvailable(WebElementFacadeImpl.java:802)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1039)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1041)
 	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
 	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.CGLIB$performAs$0(&lt;generated&gt;)
 	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d$$FastClassByCGLIB$$eb009f51.invoke(&lt;generated&gt;)
@@ -120,7 +108,7 @@ Session ID: 358a29438ce709b4cd0594475e07eccc
 	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.performAs(&lt;generated&gt;)
 	at net.serenitybdd.screenplay.Actor.perform(Actor.java:106)
 	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:90)
-	at com.co.screenplay.tasks.ExpressionSet.performAs(ExpressionSet.java:51)
+	at com.co.screenplay.tasks.ExpressionSet.performAs(ExpressionSet.java:53)
 	at com.co.screenplay.tasks.ExpressionSet$$EnhancerByCGLIB$$e69c78df.CGLIB$performAs$0(&lt;generated&gt;)
 	at com.co.screenplay.tasks.ExpressionSet$$EnhancerByCGLIB$$e69c78df$$FastClassByCGLIB$$63a1d0d3.invoke(&lt;generated&gt;)
 	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
@@ -204,7 +192,7 @@ Session ID: 358a29438ce709b4cd0594475e07eccc
 </thead>
 <tr>
 <td class="failures">Validate values after execute en expression set simulation</td>
-<td class="failures">49.362s</td>
+<td class="failures">1m42.43s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -212,14 +200,14 @@ Session ID: 358a29438ce709b4cd0594475e07eccc
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>may 03, 2023 5:08:22 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>may 03, 2023 8:09:18 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFORMACIÓN: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 21925
+Starting ChromeDriver 111.0.5563.64 (c710e93d5b63b7095afe8c2c17df34408078439d-refs/branch-heads/5563@{#995}) on port 8374
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1683151704.204][WARNING]: This version of ChromeDriver has not been tested with Chrome version 112.
-may 03, 2023 5:08:24 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1683162561.003][WARNING]: This version of ChromeDriver has not been tested with Chrome version 112.
+may 03, 2023 8:09:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMACIÓN: Detected dialect: W3C
 [Test worker] ERROR net.serenitybdd.core.Serenity - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
@@ -232,7 +220,7 @@ INFORMACIÓN: Detected dialect: W3C
 TEST FAILED WITH ERROR: Validate values after execute en expression set simulation
 ---------------------------------------------------------------------
 [Test worker] ERROR net.serenitybdd.core.Serenity - TEST FAILED AT STEP Perform as: SalesForce-User
-[Test worker] ERROR net.serenitybdd.core.Serenity - The following error occurred: no such window: target window already closed
+[Test worker] ERROR net.serenitybdd.core.Serenity - The following error occurred: element not interactable
 </pre>
 </span>
 </div>
@@ -244,7 +232,7 @@ TEST FAILED WITH ERROR: Validate values after execute en expression set simulati
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 03-may-2023 17:09:15</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 03-may-2023 20:11:05</p>
 </div>
 </div>
 </body>

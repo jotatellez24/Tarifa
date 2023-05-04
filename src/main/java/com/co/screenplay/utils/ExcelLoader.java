@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,12 @@ public class ExcelLoader {
         return _v;
     }
 
+    public static String completeDouble(Double d) {
+        String v = String.format("%f", d);
+        DecimalFormat df = new DecimalFormat("0.00");
+        String resultado = df.format(d);
+        return resultado;
+    }
     public static ArrayList<OportunidadMetodo> readExcel(File file) throws Exception {
         FileInputStream inputStream = new FileInputStream(file);
         Workbook workbook = WorkbookFactory.create(inputStream);

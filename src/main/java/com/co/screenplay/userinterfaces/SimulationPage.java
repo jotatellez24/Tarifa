@@ -8,7 +8,7 @@ public class SimulationPage {
     public static final Target BTN_SIMULATE = Target.the("Click in the simulation button")
             .locatedBy("//lightning-button[@data-id='simulate']");
     public static final Target TXT_RISK_LEVEL = Target.the("Enter the risk level")
-            .locatedBy("//div[3]//div[1]//builder_industries_interaction_rule-input-form-element[1]//div[1]//div[1]//span[2]//lightning-input[1]//div[1]//div[1]//input[1]");
+            .locatedBy("//div[4]//div[1]//builder_industries_interaction_rule-input-form-element[1]//div[1]//div[1]//span[2]//lightning-input[1]//div[1]//div[1]//input[1]");
     public static final Target TXT_INSUREDS = Target.the("Enter the number of insureds")
             .locatedBy("/html[1]/body[1]/builder_industries_interaction_rule-rule-builder-module[1]/div[1]/div[2]/builder_industries_interaction_rule-simulation-editor[1]/div[1]/div[1]/builder_industries_interaction_rule-simulation-editor-left-panel[1]/div[1]/div[1]/lightning-tabset[1]/div[1]/slot[1]/lightning-tab[1]/slot[1]/div[1]/lightning-accordion[1]/slot[1]/lightning-accordion-section[1]/section[1]/div[2]/slot[1]/nav[1]/div[6]/div[1]/builder_industries_interaction_rule-input-form-element[1]/div[1]/div[1]/span[2]/lightning-input[1]/div[1]/div[1]/input[1]");
     //  public static final Target TXT_PLAN = Target.the("Enter kind of plan")

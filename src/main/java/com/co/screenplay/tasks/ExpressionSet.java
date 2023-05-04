@@ -14,12 +14,8 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.questions.Text;
 
-import org.junit.Assert;
-
-import javax.swing.*;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 
@@ -30,8 +26,8 @@ public class ExpressionSet implements Task {
     private String SARD_HA;
     private String SA_RD_IT_A;
     private String SA_GM;
-    private String PRIMAANUAL;
-    private String PRIMAMENSUAL;
+    private String TOTALPRIMA;
+    private String TOTALPRIMAMENSUAL;
 
 
     @Override
@@ -85,8 +81,8 @@ public class ExpressionSet implements Task {
             SARD_HA = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_SA_RD_HA).viewedBy(actor).asString());
             SA_RD_IT_A = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_SA_RD_IT_A).viewedBy(actor).asString());
             SA_GM = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_SA_GM).viewedBy(actor).asString());
-            PRIMAANUAL = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_TOTAL_PRIMA).viewedBy(actor).asString());
-            PRIMAMENSUAL = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_PRIMA_FRACCION).viewedBy(actor).asString());
+            TOTALPRIMA = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_TOTAL_PRIMA).viewedBy(actor).asString());
+            TOTALPRIMAMENSUAL = FormatClass.FormatoQuestion(Text.of(SimulationPage.LBL_PRIMA_FRACCION).viewedBy(actor).asString());
 
 
             String SabanaBasico = ExcelLoader.SimpleDouble(op.getSaBasico());
@@ -95,16 +91,16 @@ public class ExpressionSet implements Task {
             String SabanaSARD_HA = ExcelLoader.SimpleDouble(op.getSaRdHa());
             String SabanaSA_RD_IT_A = ExcelLoader.SimpleDouble(op.getSaRdItA());
             String SabanaSA_GM = ExcelLoader.SimpleDouble(op.getSaGm());
-            String SabanaPrimaAnual = ExcelLoader.SimpleDouble(op.getPrimaAnualTotal());
-            String SabanaPrimaFraccion = ExcelLoader.SimpleDouble(op.getPrimaFraccionadaTotal());
+            String SabanaPrimaAnual = ExcelLoader.completeDouble(op.getPrimaAnualTotal());
+            String SabanaPrimaFraccion = ExcelLoader.completeDouble(op.getPrimaFraccionadaTotal());
             String Estado = "";
             if ((this.SaBasico.equals(SabanaBasico)) &&
                     (this.SA_GM.equals(SabanaSA_GM)) &&
                     (this.SA_PO.equals(SabanaSA_PO)) &&
                     (this.SARD_HA.equals(SabanaSARD_HA)) &&
                     (this.SA_RD_IT_A.equals(SabanaSA_RD_IT_A)) &&
-                    (this.PRIMAANUAL.equals(SabanaPrimaAnual))&&
-                    (this.PRIMAMENSUAL.equals(SabanaPrimaFraccion))
+                    (this.TOTALPRIMA.equals(SabanaPrimaAnual))&&
+                    (this.TOTALPRIMAMENSUAL.equals(SabanaPrimaFraccion))
             ) {
                 op.setEstado("Exito");
 
