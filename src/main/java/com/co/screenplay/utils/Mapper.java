@@ -28,6 +28,9 @@ public class Mapper {
         o.setPrimaFraccionadaTotal((Double)data[19]);
         o.setPlan(data[20].toString());
         o.setEstado(data[21].toString());
+        o.setExpressionprimaAnualTotal(data[22].toString());
+        o.setExpressionprimaFraccionadaTotal(data[23].toString());
+
         return o;
     }
 }

@@ -82,6 +82,8 @@ public class ExcelLoader {
         // Escribir datos
         for (int i = 0; i < ops.size(); i++) {
             sheet.getRow(i+1).createCell(21).setCellValue(ops.get(i).getEstado());
+            sheet.getRow(i+1).createCell(22).setCellValue(ops.get(i).getExpressionprimaAnualTotal());
+            sheet.getRow(i+1).createCell(23).setCellValue(ops.get(i).getExpressionprimaFraccionadaTotal());
         }
         // Escribir archivo
         FileOutputStream outputStream = new FileOutputStream(file);

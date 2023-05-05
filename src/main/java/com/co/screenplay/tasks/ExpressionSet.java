@@ -99,7 +99,7 @@ public class ExpressionSet implements Task {
                     (this.SA_PO.equals(SabanaSA_PO)) &&
                     (this.SARD_HA.equals(SabanaSARD_HA)) &&
                     (this.SA_RD_IT_A.equals(SabanaSA_RD_IT_A)) &&
-                    (this.TOTALPRIMA.equals(SabanaPrimaAnual))&&
+                    (this.TOTALPRIMA.equals(SabanaPrimaAnual)) &&
                     (this.TOTALPRIMAMENSUAL.equals(SabanaPrimaFraccion))
             ) {
                 op.setEstado("Exito");
@@ -107,7 +107,8 @@ public class ExpressionSet implements Task {
             } else {
                 op.setEstado("FALLO");
             }
-
+           op.setExpressionprimaAnualTotal(TOTALPRIMA);
+            op.setExpressionprimaFraccionadaTotal(TOTALPRIMAMENSUAL);
             Waits.WaitsUntils(4, "segundos");
             try {
                 ExcelLoader.writeExcel(new File("Sabana Tarifación Planes Cerrados.xlsx"), ops);

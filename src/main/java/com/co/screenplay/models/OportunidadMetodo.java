@@ -22,13 +22,11 @@ public class OportunidadMetodo {
     private double primaAnualTotal;
     private double primaFraccionadaTotal;
 
-    public String getEstado() {
-        return Estado;
-    }
 
-    public void setEstado(String estado) {
-        Estado = estado;
-    }
+
+    private String ExpressionprimaAnualTotal;
+    private String ExpressionprimaFraccionadaTotal;
+
 
     private String Estado;
 
@@ -43,7 +41,7 @@ public class OportunidadMetodo {
                              double saBasico, double saItp, double saPo, double saRdHa, double saRdItA, double saGm,
                              double primaBasico, double primaItp, double primaPo, double primaRdHa, double primaRdItA,
                              double primaGm, double primaTotalAnualPorAsegurado, double primaFraccionadaPorAsegurado,
-                             double primaAnualTotal, double primaFraccionadaTotal,String plan,String estado) {
+                             double primaAnualTotal, double primaFraccionadaTotal, String plan, String estado,String expressionprimaAnualTotal, String expressionprimaFraccionadaTotal) {
         this.cuenta = cuenta;
         this.cantAsegurados = cantAsegurados;
         this.nivelRiesgo = nivelRiesgo;
@@ -65,7 +63,9 @@ public class OportunidadMetodo {
         this.setPrimaAnualTotal(primaAnualTotal);
         this.setPrimaFraccionadaTotal(primaFraccionadaTotal);
         this.Plan = plan;
-        this.Estado =estado;
+        this.Estado = estado;
+        this.setExpressionprimaAnualTotal(expressionprimaAnualTotal);
+       this.setExpressionprimaFraccionadaTotal(expressionprimaFraccionadaTotal);
     }
 
     public void setFraccionamiento(String fraccionamiento) {
@@ -235,5 +235,30 @@ public class OportunidadMetodo {
 
     public void setPlan(String plan) {
         Plan = plan;
+    }
+
+
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(String estado) {
+        Estado = estado;
+    }
+    public String getExpressionprimaAnualTotal() {
+        return ExpressionprimaAnualTotal;
+    }
+
+    public void setExpressionprimaAnualTotal(String expressionprimaAnualTotal) {
+        ExpressionprimaAnualTotal = expressionprimaAnualTotal;
+    }
+
+    public String getExpressionprimaFraccionadaTotal() {
+        return ExpressionprimaFraccionadaTotal;
+    }
+
+    public void setExpressionprimaFraccionadaTotal(String expressionprimaFraccionadaTotal) {
+        ExpressionprimaFraccionadaTotal = expressionprimaFraccionadaTotal;
     }
 }
